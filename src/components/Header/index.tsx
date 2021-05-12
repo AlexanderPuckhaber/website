@@ -226,7 +226,7 @@ const Header = ({
                                 }
                                 patchVersionsData(patch);
                                 const next =
-                                  index <= versionIndex && versionIndex > 1
+                                  index <= versionIndex && versionIndex > 0
                                     ? versionIndex - 1
                                     : versionIndex;
                                 setVersionIndex(next);
