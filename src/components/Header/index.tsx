@@ -168,6 +168,9 @@ const Header = ({
                     versionList.length === 2 ? ['edit'] : ['edit', 'delete'],
                   functions: {
                     edit: (name: string) => {
+                      if (name === versionList[index]) {
+                        return false;
+                      }
                       if (versionList.includes(name)) {
                         swal({
                           className: `${theme}`,
