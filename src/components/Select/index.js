@@ -158,7 +158,12 @@ export default function Select({
                   <Button
                     key={`${optionLabel}delete`}
                     className="option-button"
-                    onClick={() => iconsAndFunctions.functions.delete()}
+                    onClick={() => {
+                      if (inputting) {
+                        setInputting(false);
+                      }
+                      iconsAndFunctions.functions.delete();
+                    }}
                   >
                     <FontAwesomeIcon fixedWidth icon={faTrashAlt} />
                   </Button>
